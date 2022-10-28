@@ -3,6 +3,10 @@
 ## Can you predict the tide ?
 by INRIA
 
+#### Supervised Learning => Regression => multi output
+https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.MultiOutputRegressor.html
+
+
 ### Data
 
 source : https://challengedata.ens.fr/participants/challenges/67/
