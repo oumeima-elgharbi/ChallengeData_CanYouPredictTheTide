@@ -18,9 +18,12 @@ def surge_prediction_metric(dataframe_y_true, dataframe_y_pred):
 
 # The following lines show how the csv files are read
 if __name__ == '__main__':
+    path_output = "./dataset/output/"
     import pandas as pd
-    CSV_FILE_Y_TRUE = 'Y_train.csv'  # path of the y_true csv file
-    CSV_FILE_Y_PRED = 'Y_train0.csv'  # path of the y_pred csv file
+    CSV_FILE_Y_TRUE = path_output + 'Y_test_true.csv'  # path of the y_true csv file
+    CSV_FILE_Y_PRED = path_output + 'Y_test_pred_XGBoost.csv'  # path of the y_pred csv file
+    #CSV_FILE_Y_TRUE = 'Y_train.csv'  # path of the y_true csv file
+    #CSV_FILE_Y_PRED = 'Y_train0.csv'  # path of the y_pred csv file
     df_y_true = pd.read_csv(CSV_FILE_Y_TRUE, index_col=0, sep=',')
     df_y_pred = pd.read_csv(CSV_FILE_Y_PRED, index_col=0, sep=',')
     df_y_pred = df_y_pred.loc[df_y_true.index]
