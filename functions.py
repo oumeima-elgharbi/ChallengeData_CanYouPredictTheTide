@@ -70,7 +70,7 @@ def save_y_pred(model_name, path_save, data, index, submit=False):
     """
     # y_columns = [f'surge1_t{i}' for i in range(10)] + [f'surge2_t{i}' for i in range(10)]
     y_val_surge_pred_df = pd.DataFrame(data=data, columns=y_columns, index=index)
-    display(y_val_surge_pred_df)
+    #display(y_val_surge_pred_df)
 
     if not submit:
         filename = "Y_val_pred_{}.csv".format(model_name)
