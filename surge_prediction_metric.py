@@ -5,6 +5,12 @@ import pandas as pd
 
 
 def surge_prediction_metric(dataframe_y_true, dataframe_y_pred):
+    """
+
+    :param dataframe_y_true:
+    :param dataframe_y_pred:
+    :return:
+    """
     weights = np.linspace(1, 0.1, 10)[np.newaxis]
     surge1_columns = [
         'surge1_t0', 'surge1_t1', 'surge1_t2', 'surge1_t3', 'surge1_t4',
@@ -23,6 +29,9 @@ def surge_prediction_metric(dataframe_y_true, dataframe_y_pred):
 def evaluate_surge(y_pred_filename, y_true_filename, path_output):
     """
 
+    :param y_pred_filename:
+    :param y_true_filename:
+    :param path_output:
     :return:
     """
     CSV_FILE_Y_TRUE = path_output + y_true_filename  # path of the y_true csv file
@@ -40,7 +49,7 @@ def evaluate_surge(y_pred_filename, y_true_filename, path_output):
 # The following lines show how the csv files are read
 if __name__ == '__main__':
     path_output = "./dataset/output/"
-    #import pandas as pd
+    # import pandas as pd
 
     CSV_FILE_Y_TRUE = path_output + 'Y_val_true.csv'  # path of the y_true csv file
     CSV_FILE_Y_PRED = path_output + 'Y_val_pred_SVR.csv'  # path of the y_pred csv file
